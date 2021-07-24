@@ -1,7 +1,9 @@
 <template>
+<router-link :to="{name:'passengerDetails', params:{_id:passenger._id}}">
     <div class="passenger-card">
         <h2>{{passenger.name}} on trip {{passenger.trips}}</h2>
     </div>
+</router-link>
 </template>
 <style scoped>
 .passenger-card{

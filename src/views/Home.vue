@@ -23,7 +23,7 @@ export default {
     api_passenger.get_flight()
     .then((response)=>{
        this.passengers=response.data.data
-      // console.log(response.data.data)
+       console.log(response.data.data)
     })
     .catch((error)=>{
       console.log(error)

@@ -10,5 +10,8 @@ const api_flight = axios.create({
 export default{
     get_flight(){
         return api_flight.get('passenger?page=0&size=10');
+    },
+    getByid(id){
+        return api_flight.get('passenger/'+id);
     }
 }
