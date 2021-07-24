@@ -3,6 +3,7 @@ import Home from "../views/Home.vue";
 import Details from '@/views/passenger/passengerDetails.vue'
 import layout from '@/views/passenger/layout.vue'
 import airline from '@/views/passenger/airline.vue'
+import notFound from '@/views/NotFound.vue'
 const routes = [
   {
     path: "/",
@@ -36,6 +37,11 @@ const routes = [
     }
   ]
   },
+  {
+    path:'/:catchAll(.*)',
+    name:'NotFound',
+    component:notFound
+  }
 ];
 
 const router = createRouter({
