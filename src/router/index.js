@@ -41,6 +41,12 @@ const routes = [
     path:'/:catchAll(.*)',
     name:'NotFound',
     component:notFound
+  },
+  {
+    path:'/404/:resource',
+    name:'404resource',
+    component:notFound,
+    props:true
   }
 ];
 
