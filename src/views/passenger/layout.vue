@@ -1,10 +1,13 @@
 <template>
 <div v-if="passenger">
-    {{passenger.name}} 
-    <div v-if="isArray">from {{passenger.airline[0].country}} </div>
-    <div v-else>from {{passenger.airline.country}}</div>
-    <p v-if="isArray">and with slogan {{passenger.airline[0].slogan}}</p>
-    <p v-else>and with slogan {{passenger.airline.slogan}}</p>
+     <router-link :to="{ name: 'passengerDetails', params: { _id } }"
+        >Details</router-link
+      >
+      |
+      <router-link :to="{ name: 'passengerAirline', params: { _id } }"
+        >Airline</router-link
+      >
+      <router-view :passenger="passenger" :isArray="isArray"/>
 </div>
 </template>
 <script>
